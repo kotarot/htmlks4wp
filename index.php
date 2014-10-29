@@ -39,9 +39,9 @@ else : ?>
 
 <?php if ($wp_query->max_num_pages > 1) : ?>
 <div class="pager attributes">
-	<?php next_posts_link('&laquo; Previous posts (older)'); ?>
+	<?php previous_posts_link('&laquo; Next posts (newer)'); ?>
 	<span class="delimiter"></span>
-	<?php previous_posts_link(' Next posts (newer) &raquo;'); ?>
+	<?php next_posts_link('Previous posts (older) &raquo;'); ?>
 </div><!-- /.pager .attributes -->
 <?php endif; ?>
 
