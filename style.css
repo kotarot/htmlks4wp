@@ -1,0 +1,251 @@
+/*
+Theme Name: HTML-KickStart for WordPress
+Description: The name of the wordpress theme htmlks4wp means HTML-KiskStart for WordPress. It uses a CSS framework HTMK-KiskStart so that we can show the contents simply and clearly. Since the theme has been written and optimized for my own use, it may not be extended for general uses.
+Theme URI: https://github.com/kotarot/htmlks4wp
+Author: KT
+Author URI: http://www.terabo.net/
+Version: 0.1
+*/
+
+/**
+ * style.css
+ */
+
+/*---------------------------------
+  OVERRIDES
+-----------------------------------*/
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #000;
+	font-size: 0.95em;
+	line-height: 160%;
+	font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',arial,verdana,sans-serif;
+	/*font: normal 0.95em/160% 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',arial,verdana,sans-serif;*/
+}
+.grid {
+	padding: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-left: 4px;
+}
+h1 {
+	font-size: 2.4em;
+	text-shadow: 1px 1px 2px #ccc;
+}
+h2 {
+	font-size: 1.6em;
+	text-shadow: 1px 1px 1px #ccc;
+}
+h3 {
+	font-size: 1.4em;
+	text-shadow: 1px 1px 1px #ccc;
+}
+h4 {
+	font-size: 1.3em;
+}
+h5 {
+	font-size: 1.2em;
+}
+h6 {
+	font-size: 1.1em;
+}
+.sub-header {
+	margin-left: 4px;
+	font-weight: normal;
+	font-size: 1.0em;
+	line-height: 50%;
+	color: #666;
+}
+
+a {
+	color: #006ad5;
+}
+
+p {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
+abbr {
+	border-bottom: none;
+}
+
+/** For Breadcrumbs */
+ul.breadcrumbs {
+	margin: 0px;
+}
+ul.breadcrumbs li {
+	font-size: 15px;
+}
+ul.breadcrumbs li.last {
+	padding-left: 5px;
+}
+
+
+/** For Comments Area */
+ul.children {
+	margin-bottom: 0px;
+}
+li.depth-2 {
+	padding: 0px;
+}
+li.depth-3 {
+	padding: 0px;
+}
+/*.comment-callout p {
+	margin-bottom: 10px;
+}*/
+/*.reply {
+	margin-bottom: 10px;
+}*/
+.required {
+	color: #c00;
+}
+textarea#comment {
+	height: 8em;
+}
+
+/** Overwriting prettify.css */
+.tag {
+	color: #000;
+}
+
+ul.footer-blog-list li {
+	padding: 0px;
+	margin-left: 20px;
+}
+
+
+/*---------------------------------
+	LAYOUT
+-----------------------------------*/
+a.nocolor {
+	color: #000;
+}
+a.nodecoration {
+	color: #000;
+	text-decoration: none;
+}
+a.post-title {
+	color: #000;
+	text-decoration: none;
+}
+
+hr.thin {
+	margin: 10px 0px;
+}
+
+/*.content-angle {
+	margin: 0px;
+	font-size: 7em;
+	color: #999;
+	text-align: center;
+}*/
+.top-menu img {
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+	        border-radius: 10px;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+/** For callout. */
+.callout {
+	background-size: cover;
+	color: #000;
+	padding-bottom: 10px;
+}
+
+/** For contents. */
+.content {
+	margin-bottom: 10px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 8px;
+	   -moz-border-radius: 8px;
+	        border-radius: 8px;
+}
+.content-post {
+	margin-bottom: 40px;
+}
+.content-background-on {
+	background-color: #eee;
+}
+
+.attributes {
+	margin-left: 10px;
+}
+
+/** For pagers. */
+.pager {
+	text-align: center;
+}
+.delimiter {
+	margin: 0px 20px;
+}
+
+/** For nav-bar. */
+#navbar {
+	/*position: fixed;*/
+	/*top: 0;*/
+	/*left: 0;*/
+	/*z-index: 1000;*/
+	width: 100%;
+	background: #000;
+	color: #fff;
+}
+	#navbar a#navtop {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	#navbar i {
+		color: #efefef;
+	}
+	#navbar ul {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+	}
+	#navbar li {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		list-style-type: 0;
+	}
+	#navbar li:first-child {
+		font-weight: bold;
+	}
+		#navbar li a {
+			display: inline-block;
+			color: #efefef;
+			padding: 16px 8px;
+			text-decoration: none;
+			line-height: 100%;
+			font-size: 18px;
+		}
+		#navbar li a:active,
+		#navbar li a:hover {
+			text-shadow: 0 0 10px #fff, 0 0 20px #eee, 0 0 30px #ddd, 0 0 40px #ccc, 0 0 60px #bbb;
+		}
+
+/** For footer. */
+.footer-blog {
+	border-top: 1px solid #ccc;
+}
+
+footer {
+	text-align: center;
+	padding: 10px 0px;
+	margin: 20px;
+	border-top: 1px solid #999;
+	color: #666;
+	font-size: 0.75em;
+	/*text-shadow: 0px 1px 1px #ccc;*/
+	position: relative;
+	top: 0;
+	left: 0;
+}
