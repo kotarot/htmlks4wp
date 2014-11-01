@@ -15,7 +15,7 @@ while (have_posts()) : the_post(); ?>
 	</ul>
 </div>
 
-<h2><a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+<h1><a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 <div class="post-meta attributes">
 	<span class="post-date"><i class="icon-calendar"></i> Posted on <?php echo get_the_date(); ?></span>,
 	<span class="post-category"><i class="icon-folder-close"></i> Category: <?php the_category(' '); ?></span>,
@@ -46,7 +46,7 @@ while (have_posts()) : the_post(); ?>
 <?php endwhile;
 else : ?>
 
-<h2>The page not found (&gt; &lt;)</h2>
+<h1>The page not found (&gt; &lt;)</h1>
 <div class="col_12 content content-post">
 	<p>The page not found (&gt; &lt;)</p>
 </div><!-- /.col_12 .content .content-post -->

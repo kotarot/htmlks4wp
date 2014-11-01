@@ -31,8 +31,8 @@ h1, h2, h3, h4, h5, h6 {
 	margin-left: 4px;
 }
 h1 {
-	font-size: 2.4em;
-	text-shadow: 1px 1px 2px #ccc;
+	font-size: 1.8em;
+	text-shadow: 1px 1px 1px #ccc;
 }
 h2 {
 	font-size: 1.6em;
@@ -50,13 +50,6 @@ h5 {
 }
 h6 {
 	font-size: 1.1em;
-}
-.sub-header {
-	margin-left: 4px;
-	font-weight: normal;
-	font-size: 1.0em;
-	line-height: 50%;
-	color: #666;
 }
 
 a {
@@ -126,6 +119,21 @@ ul.footer-blog-list li {
 /*---------------------------------
 	LAYOUT
 -----------------------------------*/
+#header-logo {
+	margin: 10px 0px 10px 4px;
+	font-size: 2.4em;
+	font-weight: bold;
+	line-height: 140%;
+	text-shadow: 1px 1px 2px #ccc;
+}
+.sub-header {
+	margin-left: 4px;
+	font-weight: normal;
+	font-size: 1.0em;
+	line-height: 50%;
+	color: #666;
+}
+
 a.nocolor {
 	color: #000;
 }

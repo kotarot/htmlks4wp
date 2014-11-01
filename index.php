@@ -15,7 +15,7 @@ Search results.
 while (have_posts()) : the_post(); ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<h2><a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+<h1><a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 <div class="post-meta attributes">
 	<span class="post-date"><i class="icon-calendar"></i> Posted on <?php echo get_the_date(); ?></span>,
 	<span class="post-category"><i class="icon-folder-close"></i> Category: <?php the_category(' '); ?></span>,
@@ -30,7 +30,7 @@ while (have_posts()) : the_post(); ?>
 <?php endwhile;
 else : ?>
 
-<h2>Content Not Found (&gt; &lt;)</h2>
+<h1>Content Not Found (&gt; &lt;)</h1>
 <div class="col_12">
 	<a href="<?php echo home_url('/'); ?>">Back to Top</a>
 </div><!-- /.col_12 -->

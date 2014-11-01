@@ -36,7 +36,7 @@ wp_nav_menu(array(
 	<div class="col_12">
 		<div class="col_8">
 			<div class="callout">
-				<h1><a class="nocolor" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a></h1>
+				<div id="header-logo"><a class="nocolor" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a></div>
 				<div class="sub-header"><?php bloginfo('description'); ?></div>
 			</div>
 		</div><!-- /.col_8 -->
