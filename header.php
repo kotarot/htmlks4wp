@@ -20,6 +20,7 @@
 
 <?php
 wp_nav_menu(array(
+    'theme_location' => 'Header Nav',
     'menu' => 'header-navi',
     'container' => 'nav',
     'container_class' => '',

@@ -6,6 +6,8 @@ add_theme_support('automatic-feed-links');
 add_theme_support('menus');
 add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption'));
 
+register_nav_menu('Header Nav', __('Nav bar', 'htmlks4wp'));
+
 register_sidebar(array(
     'name'          => 'Sidebar 1',
     'id'            => 'sidebar-1',
