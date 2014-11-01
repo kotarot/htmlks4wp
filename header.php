@@ -35,8 +35,8 @@ wp_nav_menu(array(
 	<div class="col_12">
 		<div class="col_8">
 			<div class="callout">
-				<h1><a class="nocolor" href="<?php echo home_url('/'); ?>">terabo.net</a></h1>
-				<div class="sub-header">Just another personal website.</div>
+				<h1><a class="nocolor" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a></h1>
+				<div class="sub-header"><?php bloginfo('description'); ?></div>
 			</div>
 		</div><!-- /.col_8 -->
 		<div class="col_4" style="text-align:right;">
