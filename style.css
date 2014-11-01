@@ -64,9 +64,12 @@ a {
 }
 
 p {
-	margin-left: 20px;
-	margin-right: 20px;
 	margin-bottom: 10px;
+}
+
+blockquote {
+	font-size: 1em;
+	color: #666;
 }
 
 abbr {
@@ -162,7 +165,7 @@ hr.thin {
 /** For contents. */
 .content {
 	margin-bottom: 10px;
-	padding: 5px;
+	padding: 10px 20px;
 	border: 1px solid #ccc;
 	-webkit-border-radius: 8px;
 	   -moz-border-radius: 8px;
