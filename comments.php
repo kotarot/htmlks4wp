@@ -4,7 +4,7 @@
 <ol class="comments-list">
 <?php
 wp_list_comments(array(
-    'callback'    => comments_list_cb,
+    'callback'    => 'comments_list_cb',
     'avatar_size' => 24,
     'format'      => 'html5'
 ));
@@ -12,6 +12,7 @@ wp_list_comments(array(
 </ol>
 <?php endif; ?>
 <?php
+$aria_req = ( $req ? " aria-required='true'" : '' );
 comment_form(array(
     'fields' => array(
         'author' =>
