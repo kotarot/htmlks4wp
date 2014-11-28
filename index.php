@@ -2,13 +2,43 @@
 <!-- index.php -->
 
 <?php if (is_category()) : ?>
-Filtered by Category.
+<?php
+$terms = get_terms(
+    'category',
+    array(
+        'orderby' => 'count',
+        'hide_empty' => 'true'
+    ));
+if (!empty($terms) && !is_wp_error($terms)) {
+    foreach ($terms as $term) {
+        if (is_category($term->term_id)) {
+            echo '<p>Filtered by Category "' . $term->name . '".</p>';
+            break;
+        }
+    }
+}
+?>
 <?php endif; ?>
 <?php if (is_tag()) : ?>
-Filtered by Tag.
+<?php
+$terms = get_terms(
+    'post_tag',
+    array(
+        'orderby' => 'count',
+        'hide_empty' => 'true'
+    ));
+if (!empty($terms) && !is_wp_error($terms)) {
+    foreach ($terms as $term) {
+        if (is_tag($term->term_id)) {
+            echo '<p>Filtered by Tag "' . $term->name . '".</p>';
+            break;
+        }
+    }
+}
+?>
 <?php endif; ?>
 <?php if (is_search()) : ?>
-Search results.
+<p>Search results.</p>
 <?php endif; ?>
 
 <?php if (have_posts()) :
