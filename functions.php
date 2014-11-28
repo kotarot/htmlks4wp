@@ -63,4 +63,17 @@ function allowed_tags_with_code() {
     return $allowed;
 }
 
+// Jump to the beginning of the content, if READ MORE pressed
+function remove_more_jump_link($link) {
+    $offset = strpos($link, '#more-');
+    if ($offset) {
+        $end = strpos($link, '"',$offset);
+    }
+    if ($end) {
+        $link = substr_replace($link, '', $offset, $end-$offset);
+    }
+    return $link;
+}
+add_filter('the_content_more_link', 'remove_more_jump_link');
+
 ?>
