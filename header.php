@@ -37,7 +37,7 @@ wp_nav_menu(array(
 		<div class="col_8">
 			<div class="callout">
 				<div id="header-logo">
-					<a href="<?php echo home_url('/'); ?>"><img src="<?php echo home_url() . '/header_logo.png' ?>" width="50" height="50" /></a>
+					<a href="<?php echo home_url('/'); ?>"><img src="<?php echo get_template_directory_uri() . '/header_logo.png' ?>" width="50" height="50" /></a>
 					<span id="header-text">
 						<span id="header-main"><a class="nocolor" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a></span><br>
 						<span id="header-sub"><?php bloginfo('description'); ?></span>
