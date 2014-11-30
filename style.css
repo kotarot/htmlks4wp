@@ -202,6 +202,9 @@ hr.thin {
 .content-post {
 	margin-bottom: 40px;
 }
+.content-post-index {
+	margin-bottom: 60px;
+}
 .content-background-on {
 	background-color: #eee;
 }
@@ -214,6 +217,10 @@ hr.thin {
 	margin-left: 10px;
 	font-size: 90%;
 	color: #666;
+}
+
+#comment-area {
+	padding: 10px;
 }
 
 /** For pagers. */

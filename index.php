@@ -68,7 +68,7 @@ while (have_posts()) : the_post(); ?>
 	<span class="post-tags"><i class="icon-tags"></i> <?php the_tags('Tags: ', ' '); ?></span>,
 	<span class="post-comments"><i class="icon-comments"></i> <?php comments_popup_link('0 comments', '1 comment', '% comments'); ?></span>
 </div><!-- /.post-meta .attributes -->
-<div class="col_12 content content-post">
+<div class="col_12 content content-post content-post-index">
 	<?php the_content('Read more &raquo;'); ?>
 </div><!-- /.col_12 .content .content-post -->
 </div><!-- /#post-<?php the_ID(); ?> -->
