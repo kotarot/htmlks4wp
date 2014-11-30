@@ -4,7 +4,11 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=0.8">
-<title><?php wp_title('-', true, 'right'); bloginfo('name'); ?></title>
+<?php if (is_front_page()) : ?>
+    <title>Top of <?php bloginfo('name'); ?></title>
+<?php else : ?>
+    <title><?php wp_title('-', true, 'right'); bloginfo('name'); ?></title>
+<?php endif; ?>
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/kickstart/css/kickstart.css" media="all">
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" media="all">
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
