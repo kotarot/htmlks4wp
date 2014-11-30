@@ -7,9 +7,6 @@ This website is built with <a href="http://www.wordpress.org/" target="_blank">W
 <a href="http://www.99lime.com" target="_blank">HTML KickStart</a>.
 </footer>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/kickstart/js/kickstart.js"></script>
-
 <?php wp_footer(); ?>
 
 </body>
