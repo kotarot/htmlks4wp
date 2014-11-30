@@ -40,19 +40,19 @@ wp_nav_menu(array(
 <div class="grid">
 
 	<div class="col_12">
-		<div class="col_8">
+		<div class="col_7">
 			<div class="callout">
 				<div id="header-logo">
-					<a href="<?php echo home_url('/'); ?>"><img src="<?php echo get_template_directory_uri() . '/header_logo.png' ?>" width="50" height="50" /></a>
+					<a href="<?php echo home_url('/'); ?>"><img src="<?php echo get_template_directory_uri() . '/header_logo.png' ?>" width="64" height="64" /></a>
 					<span id="header-text">
 						<span id="header-main"><a class="nocolor" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a></span><br>
 						<span id="header-sub"><?php bloginfo('description'); ?></span>
 					</span>
 				</div>
 			</div>
-		</div><!-- /.col_8 -->
-		<div class="col_4" style="text-align:right;">
+		</div><!-- /.col_7 -->
+		<div class="col_5" style="text-align:right;">
 			<?php get_search_form(); ?>
-		</div><!-- /.col_8 -->
+		</div><!-- /.col_5 -->
 	</div><!-- /.col_12 -->
 
