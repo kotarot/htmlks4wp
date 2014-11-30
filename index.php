@@ -2,6 +2,10 @@
 <!-- index.php -->
 
 <?php if (is_category()) : ?>
+<div>
+	<ul class="breadcrumbs">
+		<li><a href="<?php echo home_url('/'); ?>">Top</a></li>
+		<li><a href="<?php echo home_url('/') . 'blog/'; ?>">Blog</a></li>
 <?php
 $terms = get_terms(
     'category',
@@ -12,14 +16,22 @@ $terms = get_terms(
 if (!empty($terms) && !is_wp_error($terms)) {
     foreach ($terms as $term) {
         if (is_category($term->term_id)) {
-            echo '<p>Filtered by Category "' . $term->name . '".</p>';
+            echo '<li><a href="' . home_url('/') . 'blog/category/' . $term->slug . '/">Category: "' . $term->name . '"</a></li>';
+            $filtered_by = 'Filtered by Category: "' . $term->name . '".';
             break;
         }
     }
 }
 ?>
+	</ul>
+</div>
+<p><?php echo $filtered_by; ?></p>
 <?php endif; ?>
 <?php if (is_tag()) : ?>
+<div>
+	<ul class="breadcrumbs">
+		<li><a href="<?php echo home_url('/'); ?>">Top</a></li>
+		<li><a href="<?php echo home_url('/') . 'blog/'; ?>">Blog</a></li>
 <?php
 $terms = get_terms(
     'post_tag',
@@ -30,12 +42,16 @@ $terms = get_terms(
 if (!empty($terms) && !is_wp_error($terms)) {
     foreach ($terms as $term) {
         if (is_tag($term->term_id)) {
-            echo '<p>Filtered by Tag "' . $term->name . '".</p>';
+            echo '<li><a href="' . home_url('/') . 'blog/tag/' . $term->slug . '/">Tag: "' . $term->name . '"</a></li>';
+            $filtered_by = 'Filtered by Tag: "' . $term->name . '".';
             break;
         }
     }
 }
 ?>
+	</ul>
+</div>
+<p><?php echo $filtered_by; ?></p>
 <?php endif; ?>
 <?php if (is_search()) : ?>
 <p>Search results.</p>
