@@ -18,6 +18,14 @@ register_sidebar(array(
     'after_title'   => '</h4>'
 ));
 
+// Customize of inserting images.
+add_filter('image_send_to_editor', 'htmlks4wp_image_send_to_editor');
+function htmlks4wp_image_send_to_editor($html, $id = '', $caption = '', $title = '', $align = '', $url = '', $size = '', $alt = '') {
+    $html = str_replace('><img', '><div class="wp-image-wrapper"><img', $html);
+    $html = str_replace('/></a>', '/></div></a>', $html);
+    return $html;
+}
+
 function comments_list_cb($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment; ?>
     <li id="li-comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
