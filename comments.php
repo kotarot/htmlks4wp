@@ -26,7 +26,7 @@ comment_form(array(
         '<input id="email" name="email" type="text" value="' . esc_attr($commenter['comment_author_email']) .
         '" size="30"' . $aria_req . ' /></p>'),
     'comment_field' =>  '<p class="comment-form-comment"><label for="comment" class="col_1">' . _x('Comment', 'noun') .
-                        '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
+                        '</label><textarea id="comment" name="comment" cols="30" rows="8" aria-required="true">' .
                         '</textarea></p>',
     'comment_notes_after' => '<p class="form-allowed-tags">' .
                              sprintf(__('You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s'),
