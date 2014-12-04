@@ -84,4 +84,13 @@ function remove_more_jump_link($link) {
 }
 add_filter('the_content_more_link', 'remove_more_jump_link');
 
+// Device detection
+$ua = $_SERVER['HTTP_USER_AGENT'];
+$is_mobile = false;
+if (((strpos($ua, 'Android') !== false) && (strpos($ua, 'Mobile') !== false)) ||
+    (strpos($ua, 'iPhone') !== false) ||
+    (strpos($ua, 'Windows Phone') !== false)) {
+    $is_mobile = true;
+}
+
 ?>
