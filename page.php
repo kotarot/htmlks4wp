@@ -5,6 +5,21 @@
 while (have_posts()) : the_post(); ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+<?php if (!is_front_page()) : ?>
+<div>
+    <ul class="breadcrumbs">
+        <li><a href="<?php echo home_url('/'); ?>">Top</a></li>
+<?php
+foreach (array_reverse(get_post_ancestors($post->ID)) as $parid) {
+    $title = get_page($parid)->post_title;
+    echo '<li><a href="' . get_page_link($parid) . '" title="' . $title . '">' . $title . '</a></li>';
+} ?>
+        <li><?php echo the_title(); ?></li>
+    </ul>
+</div>
+<?php endif; ?>
+
 <h1><a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 <?php if (is_front_page()) :
     the_content();

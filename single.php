@@ -10,7 +10,7 @@ while (have_posts()) : the_post(); ?>
 	<ul class="breadcrumbs">
 		<li><a href="<?php echo home_url('/'); ?>">Top</a></li>
 		<li><a href="<?php echo home_url('/') . 'blog/'; ?>">Blog</a></li>
-		<li><a href="<?php the_permalink(); ?>">Article: "<?php the_title(); ?>"</a></li>
+		<li><a href="<?php the_permalink(); ?>">Article: <?php the_title(); ?></a></li>
 	</ul>
 </div>
 

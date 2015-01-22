@@ -114,7 +114,7 @@ border:1px dotted #ccc;
 }
 
 
-@media all and (min-width: 480px) and (max-width: 768px) {
+@media all and (min-width: 480px) and (max-width: 767px) {
 
 	.grid *[class*="col_"]{
 	float:none;
@@ -140,7 +140,7 @@ border:1px dotted #ccc;
 	
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 479px) {
 	
 	.grid *[class*="col_"]{
 	float:none;

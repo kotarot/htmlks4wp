@@ -24,8 +24,7 @@ $terms = get_terms(
 if (!empty($terms) && !is_wp_error($terms)) {
     foreach ($terms as $term) {
         if (is_category($term->term_id)) {
-            echo '<li><a href="' . home_url('/') . 'blog/category/' . $term->slug . '/"><strong>Category: "' . $term->name . '"</strong></a></li>';
-            //$filtered_by = 'Filtered by Category: "' . $term->name . '".';
+            echo '<li><a href="' . home_url('/') . 'blog/category/' . $term->slug . '/">Category: ' . $term->name . '</a></li>';
             break;
         }
     }
@@ -33,7 +32,6 @@ if (!empty($terms) && !is_wp_error($terms)) {
 ?>
 	</ul>
 </div>
-<!--<p><?php echo $filtered_by; ?></p>-->
 <?php endif; ?>
 <?php if (is_tag()) : ?>
 <div>
@@ -50,8 +48,7 @@ $terms = get_terms(
 if (!empty($terms) && !is_wp_error($terms)) {
     foreach ($terms as $term) {
         if (is_tag($term->term_id)) {
-            echo '<li><a href="' . home_url('/') . 'blog/tag/' . $term->slug . '/"><strong>Tag: "' . $term->name . '"</strong></a></li>';
-            //$filtered_by = 'Filtered by Tag: "' . $term->name . '".';
+            echo '<li><a href="' . home_url('/') . 'blog/tag/' . $term->slug . '/">Tag: ' . $term->name . '</a></li>';
             break;
         }
     }
@@ -59,10 +56,15 @@ if (!empty($terms) && !is_wp_error($terms)) {
 ?>
 	</ul>
 </div>
-<!--<p><?php echo $filtered_by; ?></p>-->
 <?php endif; ?>
 <?php if (is_search()) : ?>
-<p>Search results.</p>
+<div>
+	<ul class="breadcrumbs">
+		<li><a href="<?php echo home_url('/'); ?>">Top</a></li>
+		<li><a href="<?php echo home_url('/blog/'); ?>">Blog</a></li>
+		<li>Search Result</li>
+	</ul>
+</div>
 <?php endif; ?>
 
 <?php if (have_posts()) :
@@ -77,7 +79,7 @@ while (have_posts()) : the_post(); ?>
 	<span class="post-comments"><i class="icon-comments"></i> <?php comments_popup_link('0 comments', '1 comment', '% comments'); ?></span>
 </div><!-- /.post-meta .attributes -->
 <div class="col_12 content content-post content-post-index">
-	<?php the_content('Read more &raquo;'); ?>
+	<?php the_content('<p>Read more &raquo;</p>'); ?>
 </div><!-- /.col_12 .content .content-post -->
 </div><!-- /#post-<?php the_ID(); ?> -->
 
@@ -92,11 +94,32 @@ else : ?>
 <?php endif; ?>
 
 <?php if ($wp_query->max_num_pages > 1) : ?>
-<div class="pager attributes">
-	<?php previous_posts_link('&laquo; Next posts (newer)'); ?>
-	<span class="delimiter"></span>
-	<?php next_posts_link('Previous posts (older) &raquo;'); ?>
-</div><!-- /.pager .attributes -->
+<div class="pager">
+<?php
+global $wp_rewrite;
+$paginate_base = get_pagenum_link(1);
+if (strpos($paginate_base, '?') || ! $wp_rewrite->using_permalinks()) {
+    // for search results etc.
+    $paginate_format = '';
+    $paginate_base = add_query_arg('paged', '%#%');
+} else {
+    // for blog post etc.
+    $paginate_format = (substr($paginate_base, -1, 1) == '/' ? '' : '/') . user_trailingslashit('page/%#%/', 'paged');
+    $paginate_base .= '%_%';
+}
+echo $pager = paginate_links(array(
+    'base'      => $paginate_base,
+    'format'    => $paginate_format,
+    'total'     => $wp_query->max_num_pages,
+    'mid_size'  => 3,
+    'current'   => ($paged ? $paged : 1),
+    'prev_text' => '<i class="icon-caret-left"></i>',
+    'next_text' => '<i class="icon-caret-right"></i>',
+    'type'      => 'list'
+));
+?>
+</div>
+<div class="pager attributes"></div><!-- /.pager .attributes -->
 <?php endif; ?>
 
 <?php get_sidebar(); ?>

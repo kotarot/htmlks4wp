@@ -15,8 +15,8 @@ Version: 0.1
   OVERRIDES
 -----------------------------------*/
 body {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	color: #000;
 	font-size: 0.95em;
 	line-height: 160%;
@@ -24,30 +24,53 @@ body {
 	/*font: normal 0.95em/160% 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',arial,verdana,sans-serif;*/
 }
 .grid {
-	padding: 0px;
+	padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1/*, h2, h3, h4, h5, h6*/ {
 	margin-left: 4px;
 }
-h1 {
-	font-size: 1.8em;
-	text-shadow: 1px 1px 1px #ccc;
+@media all and (max-width: 568px) {
+	h1 {
+		font-size: 1.8em;
+		text-shadow: 1px 1px 1px #ccc;
+	}
+	h2 {
+		font-size: 1.6em;
+	}
+	h3 {
+		font-size: 1.4em;
+	}
+	h4 {
+		font-size: 1.3em;
+	}
+	h5 {
+		font-size: 1.2em;
+	}
+	h6 {
+		font-size: 1.1em;
+	}
 }
-h2 {
-	font-size: 1.6em;
-}
-h3 {
-	font-size: 1.4em;
-}
-h4 {
-	font-size: 1.3em;
-}
-h5 {
-	font-size: 1.2em;
-}
-h6 {
-	font-size: 1.1em;
+@media all and (min-width: 569px) {
+	h1 {
+		font-size: 1.6em;
+		text-shadow: 1px 1px 1px #ccc;
+	}
+	h2 {
+		font-size: 1.4em;
+	}
+	h3 {
+		font-size: 1.3em;
+	}
+	h4 {
+		font-size: 1.2em;
+	}
+	h5 {
+		font-size: 1.1em;
+	}
+	h6 {
+		font-size: 1.1em;
+	}
 }
 
 /** In the post content. */
@@ -55,7 +78,7 @@ div.content-post h2:first-child {
 	margin-top: 10px;
 }
 div.content-post h2 {
-	margin-top: 30px;
+	margin-top: 40px;
 }
 
 a {
@@ -63,14 +86,18 @@ a {
 }
 
 p {
-	margin-bottom: 20px;
+	margin: 15px 0;
 	word-wrap: break-word;
 }
+p.broad {
+	margin-left: -10px;
+}
 
-.wp-image-wrapper {
+div.wp-image-wrapper {
+	margin-bottom: 20px;
 	max-width: 100%;
 	display: inline-block;
-	box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.8);
 }
 
 blockquote {
@@ -82,9 +109,17 @@ abbr {
 	border-bottom: none;
 }
 
+code {
+	color: #1d558d;
+}
+
+.notice {
+	color: #808000;
+}
+
 /** For Breadcrumbs */
 ul.breadcrumbs {
-	margin: 0px;
+	margin: 0;
 }
 ul.breadcrumbs li {
 	font-size: 15px;
@@ -96,35 +131,20 @@ ul.breadcrumbs li.last {
 
 /** For Comments Area */
 ul.children {
-	margin-bottom: 0px;
+	margin-bottom: 0;
 }
 li.depth-2 {
-	padding: 0px;
+	padding: 0;
 }
 li.depth-3 {
-	padding: 0px;
+	padding: 0;
 }
-/*.comment-callout p {
-	margin-bottom: 10px;
-}*/
-/*.reply {
-	margin-bottom: 10px;
-}*/
-.required {
+
+span.required {
 	color: #c00;
 }
 textarea#comment {
 	height: 8em;
-}
-
-/** Overwriting prettify.css */
-.tag {
-	color: #000;
-}
-
-ul.footer-blog-list li {
-	padding: 0px;
-	margin-left: 20px;
 }
 
 
@@ -134,7 +154,7 @@ ul.footer-blog-list li {
 
 /** For header */
 #header-logo {
-	margin: 10px 0px 10px 4px;
+	margin: 10px 0 10px 4px;
 }
 #header-text {
 	position: absolute;
@@ -166,10 +186,10 @@ a.post-title {
 }
 
 hr.thin {
-	margin: 10px 0px;
+	margin: 10px 0;
 }
 
-.top-menu img {
+div.top-menu img {
 	-webkit-border-radius: 10px;
 	   -moz-border-radius: 10px;
 	        border-radius: 10px;
@@ -185,13 +205,25 @@ hr.thin {
 }
 
 /** For contents. */
-.content {
-	margin-bottom: 10px;
-	padding: 10px 20px;
-	border: 1px solid #ccc;
-	-webkit-border-radius: 8px;
-	   -moz-border-radius: 8px;
-	        border-radius: 8px;
+@media all and (max-width: 568px) {
+	.content {
+		margin-bottom: 10px;
+		padding: 10px 10px;
+		border: 1px solid #ccc;
+		-webkit-border-radius: 8px;
+		   -moz-border-radius: 8px;
+		        border-radius: 8px;
+	}
+}
+@media all and (min-width: 569px) {
+	.content {
+		margin-bottom: 10px;
+		padding: 10px 20px;
+		border: 1px solid #ccc;
+		-webkit-border-radius: 8px;
+		   -moz-border-radius: 8px;
+		        border-radius: 8px;
+	}
 }
 .content-post {
 	margin-bottom: 40px;
@@ -201,6 +233,9 @@ hr.thin {
 }
 .content-background-on {
 	background-color: #eee;
+}
+a.more-link {
+	font-weight: bold;
 }
 
 .attributes {
@@ -213,17 +248,41 @@ hr.thin {
 	color: #666;
 }
 
+.footnote-link {
+	text-decoration: none;
+	vertical-align: super;
+	font-size: 80%;
+}
+.footnote {
+	text-decoration: none;
+}
+
 #comment-area {
 	padding: 10px;
 }
 
 /** For pagers. */
-.pager {
+div.pager {
 	text-align: center;
 }
 .delimiter {
-	margin: 0px 20px;
+	margin: 0 20px;
 }
+	div.pager ul.page-numbers li {
+		display: inline;
+	}
+	div.pager span.page-numbers, a.page-numbers {
+		text-decoration: none;
+		font-size: 110%;
+		padding: 5px 10px;
+		border: 1px solid #ccc;
+		-webkit-border-radius: 4px;
+		   -moz-border-radius: 4px;
+		        border-radius: 4px;
+	}
+	div.pager span.current {
+		background-color: #ddd;
+	}
 
 /** For nav-bar. */
 #navbar {
@@ -275,9 +334,14 @@ hr.thin {
 	border-top: 1px solid #ccc;
 }
 
+ul.footer-blog-list li {
+	padding: 0;
+	margin-left: 20px;
+}
+
 footer {
 	text-align: center;
-	padding: 10px 0px;
+	padding: 10px 0;
 	margin: 20px;
 	border-top: 1px solid #999;
 	color: #666;

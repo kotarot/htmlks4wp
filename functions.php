@@ -2,9 +2,20 @@
 remove_filter('the_content', 'wpautop');
 remove_filter('the_excerpt', 'wpautop');
 
+// Remove some lines in <head>
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'wp_shortlink_wp_head');
+
 add_theme_support('automatic-feed-links');
 add_theme_support('menus');
 add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption'));
+
+// For post-thumbnails
+add_theme_support('post-thumbnails');
+set_post_thumbnail_size(150, 150, true);
 
 register_nav_menu('Header Nav', __('Nav bar', 'htmlks4wp'));
 
@@ -53,6 +64,16 @@ function comments_list_cb($comment, $args, $depth) {
         </div><!-- /#comment-<?php comment_ID(); ?> -->
 <?php
 }
+
+// Remove "tag" class from classes of body-tag,
+// to avoid butting class-names (wordpress and google-code-pretiffy)
+function remove_classes_from_body_class($wp_classes, $extra_classes) {
+    if ( ($key = array_search('tag', $wp_classes)) !== false ) {
+        unset($wp_classes[$key]);
+    }
+    return array_merge($wp_classes, (array)$extra_classes);
+}
+add_filter('body_class', 'remove_classes_from_body_class', 10, 2);
 
 // Alternative function of allowed_tags().
 function allowed_tags_with_code() {
