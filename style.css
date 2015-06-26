@@ -21,13 +21,12 @@ body {
 	font-size: 0.95em;
 	line-height: 160%;
 	font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',arial,verdana,sans-serif;
-	/*font: normal 0.95em/160% 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',arial,verdana,sans-serif;*/
 }
 .grid {
 	padding: 0;
 }
 
-h1/*, h2, h3, h4, h5, h6*/ {
+h1 {
 	margin-left: 4px;
 }
 @media all and (max-width: 568px) {
@@ -57,16 +56,16 @@ h1/*, h2, h3, h4, h5, h6*/ {
 		text-shadow: 1px 1px 1px #ccc;
 	}
 	h2 {
-		font-size: 1.4em;
+		font-size: 1.5em;
 	}
 	h3 {
-		font-size: 1.3em;
+		font-size: 1.4em;
 	}
 	h4 {
-		font-size: 1.2em;
+		font-size: 1.3em;
 	}
 	h5 {
-		font-size: 1.1em;
+		font-size: 1.2em;
 	}
 	h6 {
 		font-size: 1.1em;
@@ -74,10 +73,15 @@ h1/*, h2, h3, h4, h5, h6*/ {
 }
 
 /** In the post content. */
-div.content-post h2:first-child {
-	margin-top: 10px;
+div.content-post h2:first-of-type {
+	margin-top: 20px;
 }
 div.content-post h2 {
+	font-size: 1.4em;
+	margin-top: 60px;
+}
+div.content-post h3 {
+	font-size: 1.2em;
 	margin-top: 40px;
 }
 
@@ -86,6 +90,8 @@ a {
 }
 
 p {
+	font-size: 1.05em;
+	line-height: 180%;
 	margin: 15px 0;
 	word-wrap: break-word;
 }
@@ -102,7 +108,17 @@ div.wp-image-wrapper {
 
 blockquote {
 	font-size: 1em;
-	color: #666;
+	color: #444;
+	margin: 20px 20px 20px 0;
+	border-left: 2px solid #ccc;
+}
+blockquote span {
+	font-size: 0.85em;
+}
+
+i.dotted {
+	border-bottom: 1px dotted #333;
+	font-style: normal;
 }
 
 abbr {
@@ -139,7 +155,6 @@ li.depth-2 {
 li.depth-3 {
 	padding: 0;
 }
-
 span.required {
 	color: #c00;
 }
@@ -160,17 +175,33 @@ textarea#comment {
 	position: absolute;
 	margin-left: 10px;
 }
-#header-main {
-	font-size: 2.6em;
-	font-weight: bold;
-	line-height: 110%;
-	text-shadow: 1px 1px 2px #ccc;
+@media all and (max-width: 568px) {
+	#header-main {
+		font-size: 2.2em;
+		font-weight: bold;
+		line-height: 110%;
+		text-shadow: 1px 1px 2px #ccc;
+	}
+	#header-sub {
+		font-size: 1.0em;
+		font-weight: normal;
+		line-height: 110%;
+		color: #666;
+	}
 }
-#header-sub {
-	font-size: 1.2em;
-	font-weight: normal;
-	line-height: 110%;
-	color: #666;
+@media all and (min-width: 569px) {
+	#header-main {
+		font-size: 2.4em;
+		font-weight: bold;
+		line-height: 110%;
+		text-shadow: 1px 1px 2px #ccc;
+	}
+	#header-sub {
+		font-size: 1.2em;
+		font-weight: normal;
+		line-height: 110%;
+		color: #666;
+	}
 }
 
 a.nocolor {
@@ -189,6 +220,7 @@ hr.thin {
 	margin: 10px 0;
 }
 
+/** For the top menu page. */
 div.top-menu img {
 	-webkit-border-radius: 10px;
 	   -moz-border-radius: 10px;
@@ -218,7 +250,7 @@ div.top-menu img {
 @media all and (min-width: 569px) {
 	.content {
 		margin-bottom: 10px;
-		padding: 10px 20px;
+		padding: 10px 30px;
 		border: 1px solid #ccc;
 		-webkit-border-radius: 8px;
 		   -moz-border-radius: 8px;
@@ -286,10 +318,6 @@ div.pager {
 
 /** For nav-bar. */
 #navbar {
-	/*position: fixed;*/
-	/*top: 0;*/
-	/*left: 0;*/
-	/*z-index: 1000;*/
 	width: 100%;
 	background: #000;
 	color: #fff;
@@ -346,7 +374,6 @@ footer {
 	border-top: 1px solid #999;
 	color: #666;
 	font-size: 0.75em;
-	/*text-shadow: 0px 1px 1px #ccc;*/
 	position: relative;
 	top: 0;
 	left: 0;

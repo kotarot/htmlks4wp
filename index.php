@@ -71,9 +71,9 @@ if (!empty($terms) && !is_wp_error($terms)) {
 while (have_posts()) : the_post(); ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<h1><a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+<h1><a class="post-title entry-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 <div class="post-meta attributes">
-	<span class="post-date"><i class="fa fa-calendar"></i> Posted on <?php echo get_the_date(); ?></span>,
+	<span class="post-date date updated"><i class="fa fa-calendar"></i> Posted on <?php echo get_the_date(); ?></span>,
 	<span class="post-category"><i class="fa fa-folder"></i> Category: <?php the_category(' '); ?></span>,
 	<span class="post-tags"><i class="fa fa-tags"></i> <?php the_tags('Tags: ', ' '); ?></span>,
 	<span class="post-comments"><i class="fa fa-comments"></i> <?php comments_popup_link('0 comments', '1 comment', '% comments'); ?></span>
@@ -113,8 +113,8 @@ echo $pager = paginate_links(array(
     'total'     => $wp_query->max_num_pages,
     'mid_size'  => 3,
     'current'   => ($paged ? $paged : 1),
-    'prev_text' => '<i class="icon-caret-left"></i>',
-    'next_text' => '<i class="icon-caret-right"></i>',
+    'prev_text' => '<i class="fa fa-caret-left"></i>',
+    'next_text' => '<i class="fa fa-caret-right"></i>',
     'type'      => 'list'
 ));
 ?>
