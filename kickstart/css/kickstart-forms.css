@@ -264,14 +264,14 @@ select.error{border:1px solid red;}
 	NOTICES
 -----------------------------------*/
 .notice{
-border:1px solid gold;
-background:lightyellow;
+border:1px solid #b29804;
+background:#fcf7d8;
 padding:10px 20px 10px 40px;
 margin:10px 0;
 -moz-border-radius:5px;
 -webkit-border-radius:5px;
 border-radius:5px;
-color:#DEAE00;
+color:#b29804;
 line-height:120%;
 vertical-align: center;
 text-shadow:0px 1px rgba(255,255,255,0.5);
@@ -282,8 +282,9 @@ clear:both;
 }
 
 	.notice.warning{}/*default*/
-	.notice.error{border:1px solid red;background:pink;color:red;}
-	.notice.success{border:1px solid green;background:lightgreen;color:green;}
+	.notice.error{border:1px solid #e04646;background:#ffe6e6;color:#e04646;}
+	.notice.success{border:1px solid #0ca129;background:#dafce1;color:#0ca129;}
+	.notice.info{border:1px solid #537df6;background:#e8f3ff;color:#537df6;}
 	.notice i[class*='fa-']{position:absolute;top:50%;left:0.8em;margin-top:-0.6em;}
 	.notice a[class*='fa-remove'],
 	.notice a[class*='fa-remove']:active,

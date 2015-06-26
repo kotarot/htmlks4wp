@@ -26,7 +26,10 @@ if (is_single() && $post->post_excerpt) {
     $post_summary = strip_tags($post->post_excerpt);
     $post_summary = str_replace("\n", "", $post_summary);
     $post_summary = str_replace("\r", "", $post_summary);
-    $post_summary = mb_substr($post_summary, 0, 100) . '...';
+    $post_summary = htmlspecialchars( mb_substr($post_summary, 0, 100) ) . '...';
+}
+if (!is_single()) {
+    $post_summary = $title . 'ÅD' . $post_summary;
 }
 echo '<meta name="description" content="' . $post_summary . '">' . "\n";
 
@@ -47,7 +50,6 @@ if (is_home()) {
     $og_url = get_permalink();
     if (has_post_thumbnail()) {
         $image_id = get_post_thumbnail_id();
-        //$image = wp_get_attachment_image_src($image_id, 'thumbnail');
         $image = wp_get_attachment_image_src($image_id, 'full');
         $og_image = $image[0];
     }

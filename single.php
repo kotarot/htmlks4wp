@@ -14,9 +14,9 @@ while (have_posts()) : the_post(); ?>
 	</ul>
 </div>
 
-<h1><a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+<h1><a class="post-title entry-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 <div class="post-meta attributes">
-	<span class="post-date"><i class="fa fa-calendar"></i> Posted on <?php echo get_the_date(); ?></span>,
+	<span class="post-date date updated"><i class="fa fa-calendar"></i> Posted on <?php echo get_the_date(); ?></span>,
 	<span class="post-category"><i class="fa fa-folder"></i> Category: <?php the_category(' '); ?></span>,
 	<span class="post-tags"><i class="fa fa-tags"></i> <?php the_tags('Tags: ', ' '); ?></span>,
 	<span class="post-comments"><i class="fa fa-comments"></i> <?php comments_popup_link('0 comments', '1 comment', '% comments'); ?></span>
