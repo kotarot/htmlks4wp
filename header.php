@@ -37,9 +37,14 @@ wp_nav_menu(array(
     'container_id' => 'navbar',
     'menu_class' => '',
     'menu_id' => '',
-    'items_wrap' => ' <ul>%3$s</ul>'
+    'items_wrap' => '<div class="grid"><div id="navbar-mobile"><i class="fa fa-navicon"></i></div><ul id="menubar">%3$s</ul></div>'
 ));
 ?>
+<script>
+    $('#navbar-mobile').click(function() {
+        $('#navbar li:not(:first-child)').toggle('slow');
+    });
+</script>
 
 <div class="grid">
 

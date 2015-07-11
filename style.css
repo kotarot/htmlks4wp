@@ -72,7 +72,10 @@ h1 {
 	}
 }
 
-/** In the post content. */
+
+  /********************/
+ /**  post content  **/
+/********************/
 div.content-post h2:first-of-type {
 	margin-top: 20px;
 }
@@ -133,7 +136,10 @@ code {
 	color: #808000;
 }
 
-/** For Breadcrumbs */
+
+  /*******************/
+ /**  Breadcrumbs  **/
+/*******************/
 ul.breadcrumbs {
 	margin: 0;
 }
@@ -145,7 +151,9 @@ ul.breadcrumbs li.last {
 }
 
 
-/** For Comments Area */
+  /*********************/
+ /**  Comments Area  **/
+/*********************/
 ul.children {
 	margin-bottom: 0;
 }
@@ -167,7 +175,97 @@ textarea#comment {
 	LAYOUT
 -----------------------------------*/
 
-/** For header */
+  /***************/
+ /**  nav-bar  **/
+/***************/
+#navbar {
+	width: 100%;
+	background: #000;
+	color: #fff;
+}
+#navbar i {
+	color: #efefef;
+}
+
+@media only screen and (min-width: 768px) {
+	#navbar ul {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	#navbar li {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+	}
+	#navbar li:first-child {
+		font-weight: bold;
+	}
+	#navbar li a {
+		display: inline-block;
+		color: #efefef;
+		padding: 16px 8px;
+		text-decoration: none;
+		line-height: 100%;
+		font-size: 18px;
+	}
+	#navbar li a:active,
+	#navbar li a:hover {
+		text-shadow: 0 0 10px #fff, 0 0 20px #eee, 0 0 30px #ddd, 0 0 40px #ccc, 0 0 60px #bbb;
+	}
+	#navbar-mobile {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	#navbar li {
+		width: 100%;
+	}
+	#navbar ul {
+		display: block;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	#navbar li {
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+	#navbar li:first-child {
+		font-weight: bold;
+	}
+	#navbar li:not(:first-child) {
+		display: none;
+		margin: 0 0 0 10px;
+	}
+	#navbar li a {
+		color: #efefef;
+		padding: 16px 8px;
+		text-decoration: none;
+		line-height: 100%;
+		font-size: 18px;
+	}
+	#navbar li:first-child a {
+		display: inline-block;
+	}
+	#navbar li:not(:first-child) a {
+		display: block;
+	}
+	#navbar-mobile {
+		display: block;
+		float: right;
+		padding: 16px 8px;
+		font-size: 18px;
+		cursor: pointer;
+	}
+}
+
+  /**************/
+ /**  header  **/
+/**************/
 #header-logo {
 	margin: 10px 0 10px 4px;
 }
@@ -220,7 +318,9 @@ hr.thin {
 	margin: 10px 0;
 }
 
-/** For the top menu page. */
+  /*********************/
+ /**  top menu page  **/
+/*********************/
 div.top-menu img {
 	-webkit-border-radius: 10px;
 	   -moz-border-radius: 10px;
@@ -229,14 +329,18 @@ div.top-menu img {
 	margin-right: 5px;
 }
 
-/** For callout. */
+  /***************/
+ /**  callout  **/
+/***************/
 .callout {
 	background-size: cover;
 	color: #000;
 	padding-bottom: 10px;
 }
 
-/** For contents. */
+  /****************/
+ /**  contents  **/
+/****************/
 @media all and (max-width: 568px) {
 	.content {
 		margin-bottom: 10px;
@@ -293,7 +397,9 @@ a.more-link {
 	padding: 10px;
 }
 
-/** For pagers. */
+  /**************/
+ /**  pagers  **/
+/**************/
 div.pager {
 	text-align: center;
 }
@@ -316,48 +422,9 @@ div.pager {
 		background-color: #ddd;
 	}
 
-/** For nav-bar. */
-#navbar {
-	width: 100%;
-	background: #000;
-	color: #fff;
-}
-	#navbar a#navtop {
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-	#navbar i {
-		color: #efefef;
-	}
-	#navbar ul {
-		display: inline-block;
-		margin: 0;
-		padding: 0;
-	}
-	#navbar li {
-		display: inline-block;
-		margin: 0;
-		padding: 0;
-		list-style-type: 0;
-	}
-	#navbar li:first-child {
-		font-weight: bold;
-	}
-		#navbar li a {
-			display: inline-block;
-			color: #efefef;
-			padding: 16px 8px;
-			text-decoration: none;
-			line-height: 100%;
-			font-size: 18px;
-		}
-		#navbar li a:active,
-		#navbar li a:hover {
-			text-shadow: 0 0 10px #fff, 0 0 20px #eee, 0 0 30px #ddd, 0 0 40px #ccc, 0 0 60px #bbb;
-		}
-
-/** For footer. */
+  /*************/
+ /**  footer **/
+/*************/
 .footer-blog {
 	border-top: 1px solid #ccc;
 }
