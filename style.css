@@ -267,6 +267,12 @@ textarea#comment {
   /**************/
  /**  header  **/
 /**************/
+#header-top {
+	background-color: #f6f6f6;
+	margin-top: 0;
+	margin-bottom: 1.5em;
+	padding-top: 10px;
+}
 #header-logo {
 	margin: 10px 0 10px 4px;
 }

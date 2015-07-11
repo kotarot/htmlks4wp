@@ -48,7 +48,7 @@ wp_nav_menu(array(
 
 <div class="grid">
 
-	<div class="col_12">
+	<div id="header-top" class="col_12">
 		<div class="col_7">
 			<div class="callout">
 				<div id="header-logo">
