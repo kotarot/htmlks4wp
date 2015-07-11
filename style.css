@@ -178,8 +178,13 @@ textarea#comment {
 /***************/
 #navbar {
 	width: 100%;
-	background: #000;
+	background: rgba(0, 0, 0, 0.8);
 	color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	transition: 0.3s;
 }
 #navbar i {
 	color: #efefef;
@@ -268,7 +273,7 @@ textarea#comment {
 	background-color: #f6f6f6;
 	margin-top: 0;
 	margin-bottom: 1.5em;
-	padding-top: 10px;
+	padding-top: 60px;
 }
 #header-logo {
 	margin: 10px 0 10px 4px;
