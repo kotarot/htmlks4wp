@@ -72,7 +72,10 @@ h1 {
 	}
 }
 
-/** In the post content. */
+
+  /********************/
+ /**  post content  **/
+/********************/
 div.content-post h2:first-of-type {
 	margin-top: 20px;
 }
@@ -133,7 +136,10 @@ code {
 	color: #808000;
 }
 
-/** For Breadcrumbs */
+
+  /*******************/
+ /**  Breadcrumbs  **/
+/*******************/
 ul.breadcrumbs {
 	margin: 0;
 }
@@ -145,7 +151,9 @@ ul.breadcrumbs li.last {
 }
 
 
-/** For Comments Area */
+  /*********************/
+ /**  Comments Area  **/
+/*********************/
 ul.children {
 	margin-bottom: 0;
 }
@@ -167,7 +175,9 @@ textarea#comment {
 	LAYOUT
 -----------------------------------*/
 
-/** For nav-bar. */
+  /***************/
+ /**  nav-bar  **/
+/***************/
 #navbar {
 	width: 100%;
 	background: #000;
@@ -253,7 +263,9 @@ textarea#comment {
 	}
 }
 
-/** For header */
+  /**************/
+ /**  header  **/
+/**************/
 #header-logo {
 	margin: 10px 0 10px 4px;
 }
@@ -306,7 +318,9 @@ hr.thin {
 	margin: 10px 0;
 }
 
-/** For the top menu page. */
+  /*********************/
+ /**  top menu page  **/
+/*********************/
 div.top-menu img {
 	-webkit-border-radius: 10px;
 	   -moz-border-radius: 10px;
@@ -315,14 +329,18 @@ div.top-menu img {
 	margin-right: 5px;
 }
 
-/** For callout. */
+  /***************/
+ /**  callout  **/
+/***************/
 .callout {
 	background-size: cover;
 	color: #000;
 	padding-bottom: 10px;
 }
 
-/** For contents. */
+  /****************/
+ /**  contents  **/
+/****************/
 @media all and (max-width: 568px) {
 	.content {
 		margin-bottom: 10px;
@@ -379,7 +397,9 @@ a.more-link {
 	padding: 10px;
 }
 
-/** For pagers. */
+  /**************/
+ /**  pagers  **/
+/**************/
 div.pager {
 	text-align: center;
 }
@@ -402,7 +422,9 @@ div.pager {
 		background-color: #ddd;
 	}
 
-/** For footer. */
+  /*************/
+ /**  footer **/
+/*************/
 .footer-blog {
 	border-top: 1px solid #ccc;
 }
