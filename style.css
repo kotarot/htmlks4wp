@@ -141,12 +141,13 @@ code {
  /**  Breadcrumbs  **/
 /*******************/
 ul.breadcrumbs {
-	margin: 0;
+	margin: 0 0 20px 0;
 }
 ul.breadcrumbs li {
-	font-size: 15px;
+	font-size: 18px;
 }
 ul.breadcrumbs li.last {
+	font-weight: bold;
 	padding-left: 5px;
 }
 
