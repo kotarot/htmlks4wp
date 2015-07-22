@@ -62,4 +62,11 @@ echo '<meta property="og:description" content="' . $post_summary . '">' . "\n";
 echo '<meta property="og:site_name" content="'; bloginfo('name'); echo '">' . "\n";
 echo '<meta property="og:image" content="' . $og_image . '">' . "\n";
 
+// 4. Twitter Card
+echo '<meta name="twitter:card" content="summary" />' . "\n";
+echo '<meta name="twitter:site" content="@flickr" />' . "\n"; // Change this to your twitter account
+echo '<meta name="twitter:title" content="' . $og_title . '" />' . "\n";
+echo '<meta name="twitter:description" content="' . $post_summary . '" />' . "\n";
+echo '<meta name="twitter:image" content="' . $og_image . '" />' . "\n";
+
 ?>
