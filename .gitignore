@@ -1,0 +1,7 @@
+.DS_Store
+*~
+*.swp
+~*
+
+*.inc.php
+*.template.php
