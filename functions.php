@@ -63,6 +63,9 @@ $md_is_pc = !$md_is_mobile;
 // Load up our awesome theme options
 require_once ( get_stylesheet_directory() . '/theme-options.php' );
 
+// User-specified shortcodes
+require_once ( get_template_directory() . '/functions-shortcodes.inc.php' );
+
 function comments_list_cb($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment; ?>
     <li id="li-comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
