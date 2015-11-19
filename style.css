@@ -274,40 +274,55 @@ textarea#comment {
 	background-color: #f6f6f6;
 	margin-top: 0;
 	margin-bottom: 1.5em;
-	padding-top: 60px;
+	padding-top: 70px;
+	padding-bottom: 10px;
+	-webkit-border-radius: 8px;
+	   -moz-border-radius: 8px;
+	        border-radius: 8px;
 }
 #header-logo {
 	margin: 10px 0 10px 4px;
 }
-#header-text {
-	position: absolute;
-	margin-left: 10px;
-}
 @media all and (max-width: 568px) {
+	#header-text {
+		position: absolute;
+		margin-left: 10px;
+	}
 	#header-main {
 		font-size: 2.2em;
 		font-weight: bold;
 		line-height: 110%;
 		text-shadow: 1px 1px 2px #ccc;
 	}
+	#header-main a {
+		text-decoration: none;
+	}
 	#header-sub {
 		font-size: 1.0em;
 		font-weight: normal;
-		line-height: 110%;
+		line-height: 160%;
 		color: #666;
 	}
 }
 @media all and (min-width: 569px) {
+	#header-text {
+		position: absolute;
+		margin-left: 15px;
+	}
 	#header-main {
 		font-size: 2.4em;
 		font-weight: bold;
 		line-height: 110%;
 		text-shadow: 1px 1px 2px #ccc;
+		text-decoration: none;
+	}
+	#header-main a {
+		text-decoration: none;
 	}
 	#header-sub {
 		font-size: 1.2em;
 		font-weight: normal;
-		line-height: 110%;
+		line-height: 160%;
 		color: #666;
 	}
 }
@@ -360,11 +375,27 @@ div.top-menu img {
 		   -moz-border-radius: 8px;
 		        border-radius: 8px;
 	}
+	.content-narrow {
+		margin-bottom: 10px;
+		padding: 10px 10px;
+		border: 1px solid #ccc;
+		-webkit-border-radius: 8px;
+		   -moz-border-radius: 8px;
+		        border-radius: 8px;
+	}
 }
 @media all and (min-width: 569px) {
 	.content {
 		margin-bottom: 10px;
-		padding: 10px 30px;
+		padding: 10px 35px;
+		border: 1px solid #ccc;
+		-webkit-border-radius: 8px;
+		   -moz-border-radius: 8px;
+		        border-radius: 8px;
+	}
+	.content-narrow {
+		margin-bottom: 10px;
+		padding: 10px 20px;
 		border: 1px solid #ccc;
 		-webkit-border-radius: 8px;
 		   -moz-border-radius: 8px;
