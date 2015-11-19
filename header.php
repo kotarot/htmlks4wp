@@ -12,15 +12,15 @@ if (is_front_page()) :
 else :
     wp_title('--', true, 'right'); bloginfo('name');
 endif; ?></title>
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/kickstart/css/kickstart.css" media="all">
-<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" media="all">
-<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 <?php include 'header_meta.php'; ?>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/kickstart/css/kickstart.css" media="all">
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" media="all">
+<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 <?php wp_head(); ?>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/kickstart/js/kickstart.js"></script>
