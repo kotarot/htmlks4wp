@@ -14,7 +14,7 @@ function theme_options_init(){
  * Load up the menu page
  */
 function theme_options_add_page() {
-	add_theme_page( __( 'Theme Options', 'htmlks4wptheme' ), __( 'Theme Options', 'htmlks4wptheme' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page' );
+	add_theme_page( __( 'Theme Options', 'htmlks4wp' ), __( 'Theme Options', 'htmlks4wp' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page' );
 }
 
 /**
@@ -23,42 +23,42 @@ function theme_options_add_page() {
 $select_options = array(
 	'0' => array(
 		'value' =>	'0',
-		'label' => __( 'Zero', 'htmlks4wptheme' )
+		'label' => __( 'Zero', 'htmlks4wp' )
 	),
 	'1' => array(
 		'value' =>	'1',
-		'label' => __( 'One', 'htmlks4wptheme' )
+		'label' => __( 'One', 'htmlks4wp' )
 	),
 	'2' => array(
 		'value' => '2',
-		'label' => __( 'Two', 'htmlks4wptheme' )
+		'label' => __( 'Two', 'htmlks4wp' )
 	),
 	'3' => array(
 		'value' => '3',
-		'label' => __( 'Three', 'htmlks4wptheme' )
+		'label' => __( 'Three', 'htmlks4wp' )
 	),
 	'4' => array(
 		'value' => '4',
-		'label' => __( 'Four', 'htmlks4wptheme' )
+		'label' => __( 'Four', 'htmlks4wp' )
 	),
 	'5' => array(
 		'value' => '3',
-		'label' => __( 'Five', 'htmlks4wptheme' )
+		'label' => __( 'Five', 'htmlks4wp' )
 	)
 );
 
 $radio_options = array(
 	'yes' => array(
 		'value' => 'yes',
-		'label' => __( 'Yes', 'htmlks4wptheme' )
+		'label' => __( 'Yes', 'htmlks4wp' )
 	),
 	'no' => array(
 		'value' => 'no',
-		'label' => __( 'No', 'htmlks4wptheme' )
+		'label' => __( 'No', 'htmlks4wp' )
 	),
 	'maybe' => array(
 		'value' => 'maybe',
-		'label' => __( 'Maybe', 'htmlks4wptheme' )
+		'label' => __( 'Maybe', 'htmlks4wp' )
 	)
 );
 
@@ -73,10 +73,10 @@ function theme_options_do_page() {
 
 	?>
 	<div class="wrap">
-		<?php screen_icon(); echo "<h2>" . get_current_theme() . ' ' . __( 'Theme Options', 'htmlks4wptheme' ) . "</h2>"; ?>
+		<?php screen_icon(); echo "<h2>" . get_current_theme() . ' -- ' . __( 'Theme Options', 'htmlks4wp' ) . "</h2>"; ?>
 
 		<?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
-		<div class="updated fade"><p><strong><?php _e( 'Options saved', 'htmlks4wptheme' ); ?></strong></p></div>
+		<div class="updated fade"><p><strong><?php _e( 'Options saved', 'htmlks4wp' ); ?></strong></p></div>
 		<?php endif; ?>
 
 		<form method="post" action="options.php">
@@ -90,10 +90,10 @@ function theme_options_do_page() {
 				 * Year(s) in the copyright
 				 */
 				?>
-				<tr valign="top"><th scope="row"><?php _e( 'Year(s) in the copyright', 'htmlks4wptheme' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Year(s) in the copyright', 'htmlks4wp' ); ?></th>
 					<td>
 						<input id="htmlks4wp_theme_options[copyrightyear]" class="regular-text" type="text" name="htmlks4wp_theme_options[copyrightyear]" value="<?php esc_attr_e( $options['copyrightyear'] ); ?>" />
-						<label class="description" for="htmlks4wp_theme_options[copyrightyear]"><?php _e( '(e.g. "2015", "2010-2015", etc.)', 'htmlks4wptheme' ); ?></label>
+						<label class="description" for="htmlks4wp_theme_options[copyrightyear]"><?php _e( '(e.g. "2015", "2010-2015", etc.)', 'htmlks4wp' ); ?></label>
 					</td>
 				</tr>
 				<?php
@@ -101,10 +101,10 @@ function theme_options_do_page() {
 				 * Sitename in the copyright
 				 */
 				?>
-				<tr valign="top"><th scope="row"><?php _e( 'Sitename in the copyright', 'htmlks4wptheme' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Sitename in the copyright', 'htmlks4wp' ); ?></th>
 					<td>
 						<input id="htmlks4wp_theme_options[copyrightname]" class="regular-text" type="text" name="htmlks4wp_theme_options[copyrightname]" value="<?php esc_attr_e( $options['copyrightname'] ); ?>" />
-						<label class="description" for="htmlks4wp_theme_options[copyrightname]"><?php _e( 'Your sitename', 'htmlks4wptheme' ); ?></label>
+						<label class="description" for="htmlks4wp_theme_options[copyrightname]"><?php _e( 'Your sitename', 'htmlks4wp' ); ?></label>
 					</td>
 				</tr>
 
@@ -113,10 +113,10 @@ function theme_options_do_page() {
 				 * A sample checkbox option
 				 */
 				?>
-				<tr valign="top" style="display: none;"><th scope="row"><?php _e( 'A checkbox', 'htmlks4wptheme' ); ?></th>
+				<tr valign="top" style="display: none;"><th scope="row"><?php _e( 'A checkbox', 'htmlks4wp' ); ?></th>
 					<td>
 						<input id="htmlks4wp_theme_options[option1]" name="htmlks4wp_theme_options[option1]" type="checkbox" value="1" <?php checked( '1', $options['option1'] ); ?> />
-						<label class="description" for="htmlks4wp_theme_options[option1]"><?php _e( 'Sample checkbox', 'htmlks4wptheme' ); ?></label>
+						<label class="description" for="htmlks4wp_theme_options[option1]"><?php _e( 'Sample checkbox', 'htmlks4wp' ); ?></label>
 					</td>
 				</tr>
 
@@ -125,10 +125,10 @@ function theme_options_do_page() {
 				 * A sample text input option
 				 */
 				?>
-				<tr valign="top" style="display: none;"><th scope="row"><?php _e( 'Some text', 'htmlks4wptheme' ); ?></th>
+				<tr valign="top" style="display: none;"><th scope="row"><?php _e( 'Some text', 'htmlks4wp' ); ?></th>
 					<td>
 						<input id="htmlks4wp_theme_options[sometext]" class="regular-text" type="text" name="htmlks4wp_theme_options[sometext]" value="<?php esc_attr_e( $options['sometext'] ); ?>" />
-						<label class="description" for="htmlks4wp_theme_options[sometext]"><?php _e( 'Sample text input', 'htmlks4wptheme' ); ?></label>
+						<label class="description" for="htmlks4wp_theme_options[sometext]"><?php _e( 'Sample text input', 'htmlks4wp' ); ?></label>
 					</td>
 				</tr>
 
@@ -137,7 +137,7 @@ function theme_options_do_page() {
 				 * A sample select input option
 				 */
 				?>
-				<tr valign="top" style="display: none;"><th scope="row"><?php _e( 'Select input', 'htmlks4wptheme' ); ?></th>
+				<tr valign="top" style="display: none;"><th scope="row"><?php _e( 'Select input', 'htmlks4wp' ); ?></th>
 					<td>
 						<select name="htmlks4wp_theme_options[selectinput]">
 							<?php
@@ -155,7 +155,7 @@ function theme_options_do_page() {
 								echo $p . $r;
 							?>
 						</select>
-						<label class="description" for="htmlks4wp_theme_options[selectinput]"><?php _e( 'Sample select input', 'htmlks4wptheme' ); ?></label>
+						<label class="description" for="htmlks4wp_theme_options[selectinput]"><?php _e( 'Sample select input', 'htmlks4wp' ); ?></label>
 					</td>
 				</tr>
 
@@ -164,9 +164,9 @@ function theme_options_do_page() {
 				 * A sample of radio buttons
 				 */
 				?>
-				<tr valign="top" style="display: none;"><th scope="row"><?php _e( 'Radio buttons', 'htmlks4wptheme' ); ?></th>
+				<tr valign="top" style="display: none;"><th scope="row"><?php _e( 'Radio buttons', 'htmlks4wp' ); ?></th>
 					<td>
-						<fieldset><legend class="screen-reader-text"><span><?php _e( 'Radio buttons', 'htmlks4wptheme' ); ?></span></legend>
+						<fieldset><legend class="screen-reader-text"><span><?php _e( 'Radio buttons', 'htmlks4wp' ); ?></span></legend>
 						<?php
 							if ( ! isset( $checked ) )
 								$checked = '';
@@ -194,16 +194,16 @@ function theme_options_do_page() {
 				 * A sample textarea option
 				 */
 				?>
-				<tr valign="top" style="display: none;"><th scope="row"><?php _e( 'A textbox', 'htmlks4wptheme' ); ?></th>
+				<tr valign="top" style="display: none;"><th scope="row"><?php _e( 'A textbox', 'htmlks4wp' ); ?></th>
 					<td>
 						<textarea id="htmlks4wp_theme_options[sometextarea]" class="large-text" cols="50" rows="10" name="htmlks4wp_theme_options[sometextarea]"><?php echo esc_textarea( $options['sometextarea'] ); ?></textarea>
-						<label class="description" for="htmlks4wp_theme_options[sometextarea]"><?php _e( 'Sample text box', 'htmlks4wptheme' ); ?></label>
+						<label class="description" for="htmlks4wp_theme_options[sometextarea]"><?php _e( 'Sample text box', 'htmlks4wp' ); ?></label>
 					</td>
 				</tr>
 			</table>
 
 			<p class="submit">
-				<input type="submit" class="button-primary" value="<?php _e( 'Save Options', 'htmlks4wptheme' ); ?>" />
+				<input type="submit" class="button-primary" value="<?php _e( 'Save Options', 'htmlks4wp' ); ?>" />
 			</p>
 		</form>
 	</div>

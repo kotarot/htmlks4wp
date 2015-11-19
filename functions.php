@@ -1,4 +1,8 @@
 <?php
+
+// Setups
+load_theme_textdomain( 'htmlks4wp', get_template_directory() . '/languages' );
+
 remove_filter('the_content', 'wpautop');
 remove_filter('the_excerpt', 'wpautop');
 
@@ -44,6 +48,10 @@ $md_is_mobile = $md->isMobile();
 $md_is_tablet = $md->isTablet();
 $md_is_mobile_strict = ($md_is_mobile && !$md_is_tablet);
 $md_is_pc = !$md_is_mobile;
+
+// http://themeshaper.com/2010/06/03/sample-theme-options/
+// Load up our awesome theme options
+require_once ( get_stylesheet_directory() . '/theme-options.php' );
 
 function comments_list_cb($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment; ?>
