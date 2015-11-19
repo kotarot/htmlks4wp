@@ -32,7 +32,7 @@ $(window).scroll(function() {
 </script>
 
 <?php
-include ( get_template_directory() . '/footer-user-specified.inc.php' );
+include ( get_template_directory() . '/footer-userspecified.inc.php' );
 ?>
 
 </body>
