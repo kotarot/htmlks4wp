@@ -37,14 +37,7 @@ function htmlks4wp_image_send_to_editor($html, $id = '', $caption = '', $title =
     return $html;
 }
 
-// Device detection
-/*$ua = $_SERVER['HTTP_USER_AGENT'];
-$is_mobile = false;
-if (((strpos($ua, 'Android') !== false) && (strpos($ua, 'Mobile') !== false)) ||
-    (strpos($ua, 'iPhone') !== false) ||
-    (strpos($ua, 'Windows Phone') !== false)) {
-    $is_mobile = true;
-}*/
+// Mobile-Detect
 require_once(dirname(__FILE__) . '/Mobile-Detect-2.8.12/Mobile_Detect.php');
 $md = new Mobile_Detect;
 $md_is_mobile = $md->isMobile();
