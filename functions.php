@@ -37,6 +37,21 @@ function htmlks4wp_image_send_to_editor($html, $id = '', $caption = '', $title =
     return $html;
 }
 
+// Device detection
+/*$ua = $_SERVER['HTTP_USER_AGENT'];
+$is_mobile = false;
+if (((strpos($ua, 'Android') !== false) && (strpos($ua, 'Mobile') !== false)) ||
+    (strpos($ua, 'iPhone') !== false) ||
+    (strpos($ua, 'Windows Phone') !== false)) {
+    $is_mobile = true;
+}*/
+require_once(dirname(__FILE__) . '/Mobile-Detect-2.8.12/Mobile_Detect.php');
+$md = new Mobile_Detect;
+$md_is_mobile = $md->isMobile();
+$md_is_tablet = $md->isTablet();
+$md_is_mobile_strict = ($md_is_mobile && !$md_is_tablet);
+$md_is_pc = !$md_is_mobile;
+
 function comments_list_cb($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment; ?>
     <li id="li-comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
@@ -104,14 +119,5 @@ function remove_more_jump_link($link) {
     return $link;
 }
 add_filter('the_content_more_link', 'remove_more_jump_link');
-
-// Device detection
-$ua = $_SERVER['HTTP_USER_AGENT'];
-$is_mobile = false;
-if (((strpos($ua, 'Android') !== false) && (strpos($ua, 'Mobile') !== false)) ||
-    (strpos($ua, 'iPhone') !== false) ||
-    (strpos($ua, 'Windows Phone') !== false)) {
-    $is_mobile = true;
-}
 
 ?>
