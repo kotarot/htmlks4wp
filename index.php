@@ -62,7 +62,7 @@ if (!empty($terms) && !is_wp_error($terms)) {
 	<ul class="breadcrumbs">
 		<li><a href="<?php echo home_url('/'); ?>">Top</a></li>
 		<li><a href="<?php echo home_url('/blog/'); ?>">Blog</a></li>
-		<li>Search Result</li>
+		<li><?php _e('Search Result', 'htmlks4wp'); ?></li>
 	</ul>
 </div>
 <?php endif; ?>
@@ -88,7 +88,7 @@ else : ?>
 
 <h1>Content Not Found (&gt; &lt;)</h1>
 <div class="col_12">
-	<a href="<?php echo home_url('/'); ?>">Back to Top</a>
+	<a href="<?php echo home_url('/'); ?>"><?php _e('Back to Top', 'htmlks4wp'); ?></a>
 </div><!-- /.col_12 -->
 
 <?php endif; ?>
@@ -117,6 +117,15 @@ echo $pager = paginate_links(array(
     'next_text' => '<i class="fa fa-caret-right"></i>',
     'type'      => 'list'
 ));
+/*if ($paged == 0 || $paged == 1) {
+    $next = array_pop($pager);
+}
+if ($paged == $wp_query->max_num_pages) { // Note: type of $wp_query->max_num_pages is "float"
+    $prev = array_shift($pager);
+}
+foreach ($pager as $p) {
+    echo '<li>' . $p . '</li>';
+}*/
 ?>
 </div>
 <div class="pager attributes"></div><!-- /.pager .attributes -->
