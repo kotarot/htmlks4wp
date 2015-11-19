@@ -19,7 +19,25 @@ add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 
 
 // For post-thumbnails
 add_theme_support('post-thumbnails');
-set_post_thumbnail_size(150, 150, true);
+set_post_thumbnail_size(320, 320, true);
+
+// More images
+add_image_size('thumb-150', 150, 150, true);
+add_image_size('small-150', 150, 150, false);
+add_image_size('small-300', 300, 300, false);
+add_image_size('small-320', 320, 320, false);
+add_image_size('medium-600', 600, 600, false);
+add_image_size('medium-640', 640, 640, false);
+add_image_size('large-800', 800, 800, false);
+add_image_size('large-1024', 1024, 1024, false);
+
+// Customize of inserting images.
+add_filter('image_send_to_editor', 'htmlks4wp_image_send_to_editor');
+function htmlks4wp_image_send_to_editor($html, $id = '', $caption = '', $title = '', $align = '', $url = '', $size = '', $alt = '') {
+    $html = str_replace('><img', '><div class="wp-image-wrapper"><img', $html);
+    $html = str_replace('/></a>', '/></div></a>', $html);
+    return $html;
+}
 
 register_nav_menu('Header Nav', __('Nav bar', 'htmlks4wp'));
 
@@ -32,14 +50,6 @@ register_sidebar(array(
     'before_title'  => '<h4 class="widgettitle">',
     'after_title'   => '</h4>'
 ));
-
-// Customize of inserting images.
-add_filter('image_send_to_editor', 'htmlks4wp_image_send_to_editor');
-function htmlks4wp_image_send_to_editor($html, $id = '', $caption = '', $title = '', $align = '', $url = '', $size = '', $alt = '') {
-    $html = str_replace('><img', '><div class="wp-image-wrapper"><img', $html);
-    $html = str_replace('/></a>', '/></div></a>', $html);
-    return $html;
-}
 
 // Mobile-Detect
 require_once(dirname(__FILE__) . '/Mobile-Detect-2.8.12/Mobile_Detect.php');
