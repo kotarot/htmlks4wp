@@ -20,6 +20,7 @@ endif; ?></title>
 <![endif]-->
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/kickstart/css/kickstart.css" media="all">
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" media="all">
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() . '/style-userspecified.css'; ?>" media="all">
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 <?php wp_head(); ?>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
