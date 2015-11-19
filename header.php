@@ -57,7 +57,7 @@ wp_nav_menu(array(
     });
 </script>
 
-<div class="grid">
+<div id="content-top" class="grid">
 
 	<div id="header-top" class="col_12">
 		<div class="col_7">
