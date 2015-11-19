@@ -87,10 +87,21 @@ function theme_options_do_page() {
 
 				<?php
 				/**
-				 * Year(s) in the copyright
+				 * [header] Google analytics code
 				 */
 				?>
-				<tr valign="top"><th scope="row"><?php _e( 'Year(s) in the copyright', 'htmlks4wp' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( '[header] Google analytics code', 'htmlks4wp' ); ?></th>
+					<td>
+						<input id="htmlks4wp_theme_options[gacode]" class="regular-text" type="text" name="htmlks4wp_theme_options[gacode]" value="<?php esc_attr_e( $options['gacode'] ); ?>" />
+						<label class="description" for="htmlks4wp_theme_options[gacode]"><?php _e( '(e.g. "UA-5668xxxx-1", etc.)', 'htmlks4wp' ); ?></label>
+					</td>
+				</tr>
+				<?php
+				/**
+				 * [footer] Year(s) in the copyright
+				 */
+				?>
+				<tr valign="top"><th scope="row"><?php _e( '[footer] Year(s) in the copyright', 'htmlks4wp' ); ?></th>
 					<td>
 						<input id="htmlks4wp_theme_options[copyrightyear]" class="regular-text" type="text" name="htmlks4wp_theme_options[copyrightyear]" value="<?php esc_attr_e( $options['copyrightyear'] ); ?>" />
 						<label class="description" for="htmlks4wp_theme_options[copyrightyear]"><?php _e( '(e.g. "2015", "2010-2015", etc.)', 'htmlks4wp' ); ?></label>
@@ -98,10 +109,10 @@ function theme_options_do_page() {
 				</tr>
 				<?php
 				/**
-				 * Sitename in the copyright
+				 * [footer] Sitename in the copyright
 				 */
 				?>
-				<tr valign="top"><th scope="row"><?php _e( 'Sitename in the copyright', 'htmlks4wp' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( '[footer] Sitename in the copyright', 'htmlks4wp' ); ?></th>
 					<td>
 						<input id="htmlks4wp_theme_options[copyrightname]" class="regular-text" type="text" name="htmlks4wp_theme_options[copyrightname]" value="<?php esc_attr_e( $options['copyrightname'] ); ?>" />
 						<label class="description" for="htmlks4wp_theme_options[copyrightname]"><?php _e( 'Your sitename', 'htmlks4wp' ); ?></label>
@@ -215,6 +226,9 @@ function theme_options_do_page() {
  */
 function theme_options_validate( $input ) {
 	global $select_options, $radio_options;
+
+	// [header]
+	$input['gacode'] = wp_filter_nohtml_kses( $input['gacode'] );
 
 	// [footer] Year(s) and sitename in the copyright
 	$input['copyrightyear'] = wp_filter_nohtml_kses( $input['copyrightyear'] );
