@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+$options = get_option('htmlks4wp_theme_options');
+?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
 <meta charset="UTF-8">
