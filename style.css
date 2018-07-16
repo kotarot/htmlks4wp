@@ -97,7 +97,7 @@ a {
 p {
 	font-size: 1.05em;
 	line-height: 180%;
-	margin: 15px 0;
+	margin: 15px 0 30px;
 	word-wrap: break-word;
 }
 p.broad {
