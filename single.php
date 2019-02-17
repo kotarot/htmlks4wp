@@ -16,10 +16,12 @@ while (have_posts()) : the_post(); ?>
 
 <h1><a class="post-title entry-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 <div class="post-meta attributes">
-	<span class="post-date date updated"><i class="fa fa-calendar"></i> Posted on <?php echo get_the_date(); ?></span>,
-	<span class="post-category"><i class="fa fa-folder"></i> Category: <?php the_category(' '); ?></span>,
-	<span class="post-tags"><i class="fa fa-tags"></i> <?php the_tags('Tags: ', ' '); ?></span>,
-	<span class="post-comments"><i class="fa fa-comments"></i> <?php comments_popup_link('0 comments', '1 comment', '% comments'); ?></span>
+    <span class="post-date date updated"><i class="fa fa-calendar"></i> <?php echo get_the_date(); ?></span>
+    <span class="post-category post-meta-second"><i class="fa fa-folder"></i> <?php the_category(' '); ?></span>
+    <span class="post-tags post-meta-second"><i class="fa fa-tags"></i> <?php the_tags('', ' '); ?></span>
+    <span class="post-comments post-meta-second">
+        <i class="fa fa-comments"></i> <?php comments_popup_link('0 comments', '1 comment', '% comments'); ?>
+    </span>
 </div><!-- /.post-meta .attributes -->
 <div class="col_12 content content-post">
 

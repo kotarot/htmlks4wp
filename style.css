@@ -77,6 +77,10 @@ h1 {
   /********************/
  /**  post content  **/
 /********************/
+.post-meta-second {
+    margin-left: 10px;
+}
+
 div.content-post h2:first-of-type {
 	margin-top: 20px;
 }
