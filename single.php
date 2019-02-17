@@ -22,7 +22,9 @@ while (have_posts()) : the_post(); ?>
 	<span class="post-comments"><i class="fa fa-comments"></i> <?php comments_popup_link('0 comments', '1 comment', '% comments'); ?></span>
 </div><!-- /.post-meta .attributes -->
 <div class="col_12 content content-post">
+
 	<?php the_content(); ?>
+
 </div><!-- /.col_12 .content .content-post -->
 <?php comments_template(); ?>
 </div><!-- /#post-<?php the_ID(); ?> -->
@@ -30,15 +32,15 @@ while (have_posts()) : the_post(); ?>
 <hr class="thin">
 
 <div class="navigation">
-<?php if(get_previous_post()) : ?>
-	<div>&laquo;&laquo;&laquo; Previous post: <?php previous_post_link('%link', '%title'); ?></div>
+<?php if (get_previous_post()) : ?>
+    <div>&laquo;&laquo;&laquo; Previous post: <?php previous_post_link('%link', '%title'); ?></div>
 <?php else : ?>
-	<div>&laquo;&laquo;&laquo; Previous post: This is the first post.</div>
+    <div>&laquo;&laquo;&laquo; Previous post: This is the first post.</div>
 <?php endif; ?>
 <?php if (get_next_post()) : ?>
-	<div>&raquo;&raquo;&raquo; Next post: <?php next_post_link('%link', '%title'); ?></div>
+    <div>&raquo;&raquo;&raquo; Next post: <?php next_post_link('%link', '%title'); ?></div>
 <?php else : ?>
-	<div>&raquo;&raquo;&raquo; Next post:  Coming soon.</div>
+    <div>&raquo;&raquo;&raquo; Next post: Coming soon.</div>
 <?php endif; ?>
 </div><!-- /.navigation -->
 
